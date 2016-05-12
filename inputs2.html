@@ -1,0 +1,81 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5 APIs: Inputs</title>
+   <script type = "text/javascript">
+   
+
+  function processTextArea(){
+  var txtAreaName = document.getElementById("txtAreaName");
+  var txtOutput = document.getElementById("txtAreaOutput");
+  var AreaName = txtAreaName.value;
+  txtAreaOutput.value = AreaName
+  } 
+ </script>
+  </head>
+  <body>
+    <h1>Inputs</h1>
+    <div id=inputs>
+      <table>
+        <tr>
+          <td>Control Type</td>
+          <td> Control</td>
+          <td>Value entered</td>
+        </tr>
+        
+        <tr>
+          <td>input type="checkbox"</td>
+          <td><form>
+                <input type="checkbox" id="CheckboxName">
+              </td>
+           <<td><input type = "text" id = "CheckboxOutput" /></td>
+           </form>
+        </tr>
+        
+        <tr>
+          <td>input type="radio"</td>
+          <td><form>
+            <input type="radio" name="gender" value="male" checked> first<br>
+            <input type="radio" name="gender" value="female"> second<br>
+            <input type="radio" name="gender" value="other"> third
+          </form></td>
+          <td id="radiodata"></td>
+        </tr>
+        
+        <tr>
+          <td><form action = "">
+                 <label>input type="text" </label></form</td>
+          <td><input type = "text" id = "txtName" />
+              <input type = "button" value = "click me" onclick = "processText()"/></td>
+          <td><input type = "text" id = "txtOutput" /></td>
+              </form>
+        </tr>
+
+
+        <tr>
+          <td><form action = "">
+                 <label>textarea </label></form</td>
+          <td><textarea rows="4" cols="25" id="textAreaName"></textarea>
+              <input type = "button" value = "click me" onclick = "processTextArea()"/></td>
+          <td><input type = "text" id = "txtAreaOutput" /></td>
+              </form>
+        </tr>
+        
+        <tr>
+          <td>select</td>
+          <td><select id="SelectName">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+             </select> </td>
+             <td><input type = "text" id = "SelectOutput" /></td>
+        </tr>
+      </table>
+    </div>
+    <script src="jquery-2.2.3.min.js"></script>
+    <script src="inputs.js"></script>
+  </body>
+</html>
