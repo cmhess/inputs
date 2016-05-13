@@ -4,17 +4,15 @@
   <head>
     <meta charset="UTF-8" />
     <title>HTML5 APIs: Inputs</title>
-   <script type = "text/javascript">
+  <style>
+td,th {
+border: 1px solid black;
+}
+  </style>
+
+  </head>
    
 
-  function processTextArea(){
-  var txtAreaName = document.getElementById("txtAreaName");
-  var txtOutput = document.getElementById("txtAreaOutput");
-  var AreaName = txtAreaName.value;
-  txtAreaOutput.value = AreaName
-  } 
- </script>
-  </head>
   <body>
     <h1>Inputs</h1>
     <div id=inputs>
@@ -30,16 +28,16 @@
           <td><form>
                 <input type="checkbox" id="CheckboxName">
               </td>
-           <<td><input type = "text" id = "CheckboxOutput" /></td>
+           <td id = "CheckboxOutput" /></td>
            </form>
         </tr>
         
         <tr>
           <td>input type="radio"</td>
-          <td><form>
-            <input type="radio" name="gender" value="male" checked> first<br>
-            <input type="radio" name="gender" value="female"> second<br>
-            <input type="radio" name="gender" value="other"> third
+          <td><form id= "radioButton">
+            <input type="radio" name="MyRadio" value="first" checked> first<br>
+            <input type="radio" name="MyRadio" value="second"> second<br>
+            <input type="radio" name="MyRadio" value="third"> third
           </form></td>
           <td id="radiodata"></td>
         </tr>
@@ -48,18 +46,18 @@
           <td><form action = "">
                  <label>input type="text" </label></form</td>
           <td><input type = "text" id = "txtName" />
-              <input type = "button" value = "click me" onclick = "processText()"/></td>
-          <td><input type = "text" id = "txtOutput" /></td>
+              <input type = "button" id= "button1" value = "submit"/></td>
+          <td id = "txtOutput" ></td>
               </form>
         </tr>
 
 
         <tr>
           <td><form action = "">
-                 <label>textarea </label></form</td>
+                 <label>textArea </label></form</td>
           <td><textarea rows="4" cols="25" id="textAreaName"></textarea>
-              <input type = "button" value = "click me" onclick = "processTextArea()"/></td>
-          <td><input type = "text" id = "txtAreaOutput" /></td>
+              <input type = "button" id = "button2" value = "submit"/></td>
+          <td id = "txtAreaOutput" /></td>
               </form>
         </tr>
         

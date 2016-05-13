@@ -1,4 +1,36 @@
-(function() {
+
+var txtOutput = "";
+var txtAreaOutput = "";
+var CheckboxOutput = false;
+var radiodata = "";
+
+$(document).ready(function(){
+    
+    $("#button1").click(function(){	
+    var txtOutput = $("#txtName").val();
+    $('#txtOutput').text(txtOutput); 
+    });
+
+    $("#button2").click(function(){	
+    var txtAreaOutput = $("#textAreaName").val();
+    $('#txtAreaOutput').text(txtAreaOutput); 
+    });
+
+    $('input[type="checkbox"]').click(function(){
+    var CheckboxOutput = $("#CheckboxName").val();
+    $('#CheckboxOutput').text(CheckboxOutput); 
+    });
+
+    $('#radioButton').on('change', function() {
+    var radiodata = $('input[name="myRadio"]:checked', '#myForm').val();
+    $('#radiodata').text(radiodata);  
+    });
+
+});
+
+
+
+/*(function() {
 'use strict';
 var checkboxdata = false;
 var txtName = "";
@@ -9,19 +41,14 @@ DisplayInputs();
 
 //=======================================================
 
- function processCheckbox(){
-  var CheckboxName = document.getElementById("CheckboxName");
-  var CheckboxOutput = document.getElementById("CheckboxOutput");
-  var CheckboxName = CheckboxName.value;
-  CheckboxOutput.value = CheckboxName
-  } 
+
 
 
   function processText(){
-  var txtName = document.getElementById("txtName");
+  var txtName = document.getElementById('txtName').addEventListener('click', processText);
   var txtOutput = document.getElementById("txtOutput");
-  var name = txtName.value;
-  txtOutput.value = name
+  var name = txtName.innerHTML;
+  txtOutput.innerHTML = name
   } 
 
   function processSelect(evt){
@@ -33,6 +60,13 @@ DisplayInputs();
   evt.preventDefault( );
   } 
 
+ function processCheckbox(){
+  //document.getElementById('messageCheckbox').checked;
+  var CheckboxName = document.getElementById("CheckboxName");
+  var CheckboxOutput = document.getElementById("CheckboxOutput");
+  var CheckboxName = CheckboxName.value;
+  CheckboxOutput.value = CheckboxName
+  } 
 })
 /*function checkbox( evt ) {
     var checkboxdata = document.getElementById("check").checked;
